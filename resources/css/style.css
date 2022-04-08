@@ -43,30 +43,38 @@ nav ul{
     list-style: none;
     font-family: 'Oswald', sans-serif;
     position: absolute;
+    top: 2rem;
+    margin-top: 0;
+    padding-top: 0;
 }
 
-nav a::after{
+.nav-link{
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.nav-link::after{
     transition: all ease-in-out .2s;
-    background: none repeat scroll 0 0 var(--text-color);
+    background: var(--text-color);
     content: "";
     display: block;
     height: 1px;
     width: 0;
 }
 
-nav a:hover:after {
+.nav-link:hover:after {
     width: 100%;
 }
 
 .gala{
     position: absolute;
     right: 50vw;
-    top: 5rem;
+    top: 2rem;
 }
 .nikolic{
     position: absolute;
     left: 50vw;
-    top: 5rem;
+    top: 2rem;
     transform: translateY(5rem);
 }
 
@@ -97,12 +105,6 @@ nav a:hover:after {
     right: 60%;
     transform: translateY(10rem);
 }
-
-/* .director{
-    position: absolute;
-    right: 60%;
-    transform: translateY(10rem);
-} */
 
 .model{
     position: absolute;
