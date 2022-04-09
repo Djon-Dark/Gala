@@ -20,7 +20,7 @@
 /* SPECIAL CLASSES */
 .white{
     color: var(--bkg-color);
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px var(--text-color);
 }
 
 .top-space{
@@ -41,6 +41,10 @@
 
 .short{
     margin: 0 !important;
+}
+
+.noshadow{
+    box-shadow: none !important;
 }
 
 /* NORMAL CLASSES */
@@ -153,7 +157,7 @@ section{
     justify-content: center;
     margin-bottom: 2vw;
     opacity: 0;
-    /* animation: fadeup 1s ease; */
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .image-container img{
