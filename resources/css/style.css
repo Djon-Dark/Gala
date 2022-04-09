@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+/* ANIMATIONS */
+@keyframes fadeup {
+    from{
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-/* posebne klase */
+.fadeup{
+    animation: fadeup 1s ease;
+    opacity: 1 !important;
+    transition: opacity 1s ease;
+}
+
+/* SPECIAL CLASSES */
 .white{
     color: var(--bkg-color);
     -webkit-text-stroke: 2px black;
@@ -26,7 +43,7 @@
     margin: 0 !important;
 }
 
-/* obicne klase */
+/* NORMAL CLASSES */
 a{
     text-decoration: none;
     color: var(--text-color);
@@ -51,6 +68,7 @@ nav ul{
 .nav-link{
     display: inline-block;
     font-size: 1.2rem;
+    opacity: 0;
 }
 
 .nav-link::after{
@@ -74,8 +92,7 @@ nav ul{
 .nikolic{
     position: absolute;
     left: 50vw;
-    top: 2rem;
-    transform: translateY(5rem);
+    top: 7rem;
 }
 
 .heading{
@@ -98,19 +115,13 @@ nav ul{
     line-height: 5rem;
     margin: 0;
     padding: 0;
+    opacity: 0;
 }
 
 .actress{
-    position: absolute;
-    right: 60%;
-    transform: translateY(10rem);
+    opacity: 0;
 }
 
-.model{
-    position: absolute;
-    left: 60%;
-    transform: translateY(10rem);
-}
 
 section{
     display: flex;
@@ -141,6 +152,8 @@ section{
     align-items: center;
     justify-content: center;
     margin-bottom: 2vw;
+    opacity: 0;
+    /* animation: fadeup 1s ease; */
 }
 
 .image-container img{
