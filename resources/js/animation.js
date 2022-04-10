@@ -2,11 +2,10 @@ let actress = document.querySelector(".actress");
 let director = document.querySelector(".director");
 let model = document.querySelector(".model");
 let imageContainers = document.querySelectorAll(".image-container");
-// let gala = document.querySelector(".gala");
-// let nikolic = document.querySelector(".nikolic");
 let firstImgCont = document.querySelector(".firstImgCont");
 let navlinks = document.querySelectorAll(".nav-link");
 
+// FADE UP ANIMATION, CHECKS IF TARGET IN VIEW ON LOAD AND THEN ON SCROLL
 function addFadeUp(target, offset=0, delay=0){
     const events = ["load", "scroll"];
     function multipleEL(event){
@@ -29,15 +28,13 @@ function addFadeUp(target, offset=0, delay=0){
     events.forEach(event => multipleEL(event));
 }
 
-
+// FUNCTION INITIALIZATION 
 addFadeUp(actress, 0, 100); // actress and firstImgCont have to have same delay
 addFadeUp(firstImgCont, 0, 100);
 
 addFadeUp(director, -200);
 addFadeUp(model);
 imageContainers.forEach(image => addFadeUp(image,0,700));
-// addFadeUp(gala);
-// addFadeUp(nikolic,0,200);
 
 // NAVLINKS STAGGERED FADE IN, ONE BY ONE
 for(let i=0;i<navlinks.length;i++){
