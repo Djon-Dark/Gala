@@ -41,7 +41,8 @@ addFadeUp(director, -200);
 addFadeUp(model);
 imageContainers.forEach(image => addFadeUp(image,0,700));
 addFadeUp(imgala, 0, 500);
-addFadeUp(aboutText, 0, 1000);
+addFadeUp(aboutText, 0,1300);
+addFadeUp(document.querySelector(".about-me-img"), 0, 1500);
 
 // NAVLINKS STAGGERED FADE IN, ONE BY ONE
 for(let i=0;i<navlinks.length;i++){

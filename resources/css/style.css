@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Ubuntu:wght@300;400;500&display=swap');
+
 /* ANIMATIONS */
 @keyframes fadeup {
     from{
@@ -176,7 +178,7 @@ section p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30vh 0;
+    margin: 5rem 0;
 }
 
 #contact-details p{
@@ -189,6 +191,13 @@ section p{
     height: 3rem;
     width: 3rem;
     margin: 0 1rem;
+    border-radius: 1rem;
+    filter: brightness(0);
+}
+
+#contact-details img:hover{
+    filter: brightness(1);
+    transition: all 0.2s ease;
 }
 
 .contact-img{
@@ -216,11 +225,28 @@ section p{
 }
 .about-text-container{
     max-width: 40rem;
+    min-width: 20rem;
     margin: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about-text-container p{
+    font-size: 1rem;
 }
 
 .about-me-img{
-    max-width: 40rem;
+    max-width: 40vw;
+    min-width: 20rem;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.about-me-img img{
+    height: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -271,6 +297,10 @@ section p{
     #contact-details img{
         height: 8vw;
         width: 8vw;
+    }
+
+    .about-me-img{
+        display: none;
     }
 }
 
