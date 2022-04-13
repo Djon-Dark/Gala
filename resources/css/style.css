@@ -192,13 +192,13 @@ section p{
     width: 3rem;
     margin: 0 1rem;
     border-radius: 1rem;
-    filter: brightness(0);
+    /* filter: brightness(0); */
 }
 
-#contact-details img:hover{
+/* #contact-details img:hover{
     filter: brightness(1);
     transition: all 0.2s ease;
-}
+} */
 
 .contact-img{
     height: 15rem;
@@ -227,7 +227,6 @@ section p{
 
 .about-text-container{
     max-width: 40rem;
-    /* min-width: 15rem; */
     width: 50vw;
     margin: 2vw;
     font-family: 'Ubuntu', sans-serif;
@@ -238,9 +237,6 @@ section p{
 }
 /* DA LI STAVITI JOS JEDAN MEDIA QUERY */
 .about-me-img{
-    /* width: 40vw; */
-    /* max-width: 25rem; */
-    /* max-height: 80%; */
     height: 37rem;
     width: 25rem;
     overflow: hidden;
@@ -249,9 +245,6 @@ section p{
     align-items: center;
     margin-right: 2vw;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-    /* background-image: url(/resources/images/Gala\ gloria.jpg);
-    background-size: contain;
-    background-position: center; */
 }
 
 .about-me-img img{
