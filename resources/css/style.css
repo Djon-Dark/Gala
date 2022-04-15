@@ -99,6 +99,11 @@ video{
     object-position: center;
 }
 
+i{
+    margin: 0 2rem;
+    font-size: 4rem;
+}
+
 /* SPECIFIC CLASSES */
 nav ul{
     list-style: none;
@@ -361,6 +366,10 @@ section p{
 }
 
 @media screen and (max-width:420px){
+    i{
+        margin: 0 1rem;
+    }
+
     .nikolic{
         top: 25vw;
     }
