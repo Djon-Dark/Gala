@@ -73,6 +73,12 @@ h1{
     font-size: 2.5rem;
 }
 
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* SPECIFIC CLASSES */
 nav ul{
     list-style: none;
@@ -201,8 +207,8 @@ section p{
 } */
 
 .contact-img{
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
