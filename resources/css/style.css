@@ -51,6 +51,10 @@
     overflow: visible !important;
 }
 
+.mobile{
+    display: none;
+}
+
 /* GENERAL CLASSES */
 html{
     scroll-behavior: smooth;
@@ -77,6 +81,7 @@ video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* SPECIFIC CLASSES */
@@ -282,6 +287,14 @@ section p{
     }
 }
 @media screen and (max-width:700px){
+    .mobile{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+
     .top-space{
         margin: 0;
     }
@@ -311,6 +324,11 @@ section p{
 
     .wide{
         height: auto;
+    }
+
+    .tall{
+        height: auto;
+        max-height: 90vh;
     }
 
     .reverse{
