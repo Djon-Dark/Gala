@@ -69,6 +69,10 @@
     width: 100%;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
 /* GENERAL CLASSES */
 html{
     scroll-behavior: smooth;
@@ -86,6 +90,7 @@ body{
     --bkg-color: #ffffff;
     font-family: 'Oswald', sans-serif;
     color: var(--text-color);
+    background-color: var(--bkg-color);
 }
 
 h1{
@@ -97,11 +102,6 @@ video{
     width: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-i{
-    margin: 0 2rem;
-    font-size: 4rem;
 }
 
 /* SPECIFIC CLASSES */
@@ -215,7 +215,6 @@ section p{
 #contact-details p{
     font-size: 3rem;
     margin: 1rem;
-    text-transform: uppercase;
 }
 
 #contact-details img{
