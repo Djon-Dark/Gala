@@ -36,10 +36,12 @@
 
 .tall{
     height: 50vw;
+    max-height: 50rem;
 }
 
 .wide{
     height: 25vw;
+    max-height: 25rem;
 }
 
 .short{
@@ -184,10 +186,12 @@ section p{
     display: flex;
     flex-direction: column;
     width: 40%;
+    max-width: 40rem;
 }
 
 .wide-column{
     width: 82%;
+    max-width: calc(80rem + 2vw);
 }
 
 .image-container{
