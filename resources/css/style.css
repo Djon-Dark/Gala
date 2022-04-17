@@ -93,6 +93,7 @@ body{
     font-family: 'Oswald', sans-serif;
     color: var(--text-color);
     background-color: var(--bkg-color);
+    transition: all 3s ease;
 }
 
 h1{
@@ -109,7 +110,8 @@ video{
 /* SPECIFIC CLASSES */
 nav ul{
     list-style: none;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 2rem;
     margin-top: 0;
     padding-left: 2rem;
@@ -134,13 +136,16 @@ nav ul{
 }
 
 .gala{
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     right: 50vw;
     top: 2rem;
+    
 }
 
 .nikolic{
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     left: 50vw;
     top: 7rem;
 }
@@ -170,6 +175,7 @@ section{
     justify-content: center;
     gap: 2vw;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 section p{
