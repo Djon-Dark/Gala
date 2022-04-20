@@ -287,6 +287,19 @@ section p{
     height: 100%;
 }
 
+/* TEST SECTION */
+.parallax{
+    font-size: 10vw;
+    font-weight: bold;
+    width: 100%;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: end;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width:950px){
     /* ABOUT ME */
