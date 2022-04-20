@@ -29,5 +29,25 @@ function scrollanje2(target, speed, factor=3){
     })
 }
 
-scrollanje2(document.querySelector(".direktor"));
-scrollanje2(document.querySelector(".modelica"));
+// scrollanje2(document.querySelector(".direktor"));
+// scrollanje2(document.querySelector(".modelica"));
+
+// USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS IN VIEW WITH ACTIVATION THRESHOLD
+function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){
+    document.addEventListener('scroll', ()=>{
+        const topDistance = target.getBoundingClientRect().top;
+        const bottomDistance = target.getBoundingClientRect().bottom;
+        const bottomFast = Math.abs(bottomDistance - window.innerHeight);
+        const bottomSlow = bottomDistance - window.innerHeight;
+        if(topDistance >=-topThreshold && bottomDistance <= window.innerHeight+bottomThreshold){
+            if(speed === "fast"){
+                target.style.transform = `translateY(${-bottomFast*(factor/10)}px)`;
+            } else {
+                target.style.transform = `translateY(${-bottomSlow*(factor/10)}px)`;
+            }    
+        }
+    })
+}
+
+scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
+scrollanje3(document.querySelector(".modelica"),1,7,200, 200);
