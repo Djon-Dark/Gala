@@ -13,6 +13,7 @@ function scrollanje(target, factor){
 scrollanje(document.querySelector('.glumica'),5);
 
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS FULLY IN VIEW
+// - negative factor will increase scrolling speed
 function scrollanje2(target, speed, factor=3){
     document.addEventListener('scroll', ()=>{
         const topDistance = target.getBoundingClientRect().top;
@@ -29,10 +30,8 @@ function scrollanje2(target, speed, factor=3){
     })
 }
 
-// scrollanje2(document.querySelector(".direktor"));
-// scrollanje2(document.querySelector(".modelica"));
-
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS IN VIEW WITH ACTIVATION THRESHOLD
+// - negative factor will increase scrolling speed
 function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){
     document.addEventListener('scroll', ()=>{
         const topDistance = target.getBoundingClientRect().top;
@@ -49,5 +48,13 @@ function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0)
     })
 }
 
-scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
-scrollanje3(document.querySelector(".modelica"),1,7,200, 200);
+// JS MEDIA QUERY - set different scroll speed on mobile
+if(window.matchMedia("(max-width:420px)").matches){
+    scrollanje3(document.querySelector(".direktor"),1,0.5,200, 200);
+    scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
+    console.log("mobile view");
+} else {
+    scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
+    scrollanje3(document.querySelector(".modelica"),1,7,200, 200);
+    console.log("desktop view");
+}

@@ -406,4 +406,8 @@ section p{
         font-size: 15vw;
         line-height: 15vw;
     }
+
+    .parallax{
+        font-size: 20vw;
+    }
 }
