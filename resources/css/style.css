@@ -282,41 +282,6 @@ section p{
     min-height: 100%;
 }
 
-/* PAGE SPECIFIC CLASSES */
-/* ABOUT ME PAGE */
-/* .about-me-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.about-text-container{
-    max-width: 40rem;
-    width: 50vw;
-    margin: 2vw;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.about-text-container p{
-    font-size: 1rem;
-}
-
-.about-me-img{
-    height: 37rem;
-    width: 25rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 2vw;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-}
-
-.about-me-img img{
-    height: 100%;
-} */
-
 /* TEST SECTION */
 .parallax{
     font-size: 10vw;
@@ -331,10 +296,10 @@ section p{
 .right{
     text-align: end;
 }
-.glumica{
+/* .glumica{
     position: relative;
     top: 10vw;
-}
+} */
 
 /* MEDIA QUERIES */
 @media screen and (max-width:950px){

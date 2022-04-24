@@ -55,7 +55,7 @@ if(window.matchMedia("(max-width:700px)").matches){
     scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
     console.log("mobile view");
 } else {
-    scrollanje3(document.querySelector('.glumica'), 1,5,0,0);
+    scrollanje3(document.querySelector('.glumica'), 1,2,0,0);
     scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
     scrollanje3(document.querySelector(".modelica"),1,7,200,200);
     console.log("desktop view");
