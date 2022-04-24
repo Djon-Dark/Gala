@@ -56,8 +56,12 @@
     overflow: visible !important;
 }
 
-.mobile{
+/* .mobile{
     display: none;
+} */
+
+/* .link{
+    border: 1px solid red;
 }
 
 .link::after {
@@ -72,7 +76,7 @@
 
 .link:hover::after {
     width: 100%;
-}
+} */
 
 .uppercase{
     text-transform: uppercase;
@@ -97,6 +101,7 @@ body{
     flex-direction: column;
     --text-color: rgb(0, 0, 0);
     --bkg-color: #ffffff;
+    --gala-red: rgb(220, 0, 0);
     --mainfont: 'Josefin Sans', sans-serif;
     --alternatefont: 'Josefin Sans', sans-serif;
     font-family: var(--mainfont);
@@ -148,6 +153,10 @@ nav ul{
     margin-bottom: 5rem;
     text-align: center;
     font-weight: 200;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gala{
@@ -170,25 +179,31 @@ nav ul{
     justify-content: center;
     /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
     margin: 4rem 0;
-    border: 1px solid red;
+    border: 1px solid var(--gala-red);
     transition: all 0.3s ease;
 }
 
 .cvbtn:hover{
     /* border: 1px solid rgba(255, 0, 0, 0); */
     cursor: pointer;
-    color: rgb(220, 0, 0);
+    color: var(--gala-red);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .contact{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     font-size: 1.5rem;
 }
 
 .contact a{
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact a:hover{
+    color: var(--gala-red);
 }
 
 .social{
@@ -196,7 +211,7 @@ nav ul{
 }
 
 .social i{
-    margin: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 section{

@@ -5,7 +5,7 @@ let imageContainers = document.querySelectorAll(".image-container");
 let firstImgCont = document.querySelector(".firstImgCont");
 let navlinks = document.querySelectorAll(".nav-link");
 let imgala = document.querySelector(".imgala");
-let aboutText = document.querySelector(".about-text");
+// let aboutText = document.querySelector(".about-text");
 
 
 // FADE UP ANIMATION, CHECKS IF TARGET IN VIEW ON LOAD AND THEN ON SCROLL
@@ -41,11 +41,18 @@ addFadeUp(director, -200);
 addFadeUp(model);
 imageContainers.forEach(image => addFadeUp(image,0,700));
 addFadeUp(imgala, 0, 500);
-addFadeUp(aboutText, 0,1300);
+// addFadeUp(aboutText, 0,1300);
 addFadeUp(document.querySelector(".about-me-img"), 0, 1500);
 // addFadeUp(document.querySelector(".glumica"), 0, 500);
 
 // NAVLINKS STAGGERED FADE IN, ONE BY ONE
-for(let i=0;i<navlinks.length;i++){
-    addFadeUp(navlinks[i],0,i*100)
+// for(let i=0;i<navlinks.length;i++){
+//     addFadeUp(navlinks[i],0,i*100)
+// }
+
+// ABOUT-TEXT STAGGERED FADE IN, ONE BY ONE
+let aboutText = document.querySelector(".about-text").children;
+console.log(aboutText);
+for(let i=0;i<aboutText.length;i++){
+    addFadeUp(aboutText[i],0,i*300)
 }
