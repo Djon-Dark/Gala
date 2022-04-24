@@ -11,7 +11,11 @@ function colorChange(target, r,g,b, invert){
         }
     })
 }
-colorChange(document.querySelector(".actress"), 255,255,255,"y");
-colorChange(document.querySelector(".model"), 20,20,20,"y");
-// colorChange(document.querySelector(".director"), 250,223,247);
-// colorChange(document.querySelector(".model"), 223,250,230);
+
+// BIJELO CRNO
+// colorChange(document.querySelector(".glumica"), 255,255,255,"y");
+// colorChange(document.querySelector(".modelica"), 20,20,20,"y");
+
+// colorChange(document.querySelector("video"), 0,0,0);
+// colorChange(document.querySelector(".direktor"), 250,223,247);
+// colorChange(document.querySelector(".modelica"), 50,50,50);

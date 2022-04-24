@@ -49,7 +49,7 @@ function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0)
 }
 
 // JS MEDIA QUERY - set different scroll speed on mobile
-if(window.matchMedia("(max-width:420px)").matches){
+if(window.matchMedia("(max-width:700px)").matches){
     scrollanje3(document.querySelector(".direktor"),1,0.5,200, 200);
     scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
     console.log("mobile view");
