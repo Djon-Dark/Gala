@@ -10,7 +10,7 @@ function scrollanje(target, factor){
     })
 }
 
-scrollanje(document.querySelector('.glumica'),5);
+// scrollanje(document.querySelector('.glumica'),5);
 
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS FULLY IN VIEW
 // - negative factor will increase scrolling speed
@@ -50,11 +50,13 @@ function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0)
 
 // JS MEDIA QUERY - set different scroll speed on mobile
 if(window.matchMedia("(max-width:700px)").matches){
+    scrollanje3(document.querySelector('.glumica'), 1,2,200,200);
     scrollanje3(document.querySelector(".direktor"),1,0.5,200, 200);
     scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
     console.log("mobile view");
 } else {
+    scrollanje3(document.querySelector('.glumica'), 1,5,0,0);
     scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
-    scrollanje3(document.querySelector(".modelica"),1,7,200, 200);
+    scrollanje3(document.querySelector(".modelica"),1,7,200,200);
     console.log("desktop view");
 }
