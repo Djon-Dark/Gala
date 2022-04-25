@@ -33,6 +33,10 @@
     margin-top: 5rem;
 }
 
+.bottom-space{
+    margin-bottom: 15rem;
+}
+
 .transparent{
     opacity: 0;
 }
@@ -56,34 +60,8 @@
     overflow: visible !important;
 }
 
-/* .mobile{
-    display: none;
-} */
-
-/* .link{
-    border: 1px solid red;
-}
-
-.link::after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 0.1rem;
-    width: 0px;
-    background: var(--text-color);
-    transition: all 0.1s linear;
-}
-
-.link:hover::after {
-    width: 100%;
-} */
-
 .uppercase{
     text-transform: uppercase;
-}
-
-.text-container{
-    align-items: flex-start !important;
 }
 
 /* GENERAL CLASSES */
@@ -122,33 +100,6 @@ video{
 }
 
 /* SPECIFIC CLASSES */
-nav ul{
-    list-style: none;
-    position: absolute;
-    /* position: fixed; */
-    top: 2rem;
-    margin-top: 0;
-    padding-left: 2rem;
-}
-
-.nav-link{
-    display: inline-block;
-    font-size: 1.2rem;
-}
-
-.nav-link::after{
-    transition: all ease-in-out .2s;
-    background: var(--text-color);
-    content: "";
-    display: block;
-    height: 1px;
-    width: 0;
-}
-
-.nav-link:hover:after {
-    width: 100%;
-}
-
 .heading{
     margin-bottom: 5rem;
     text-align: center;
@@ -170,21 +121,31 @@ nav ul{
     line-height: 1rem !important;
 }
 
+.text-container{
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-evenly !important;
+}
+
+.text-container h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 .cvbtn{
     font-size: 0.8rem;
     height: 3rem;
+    min-height: 3rem;
     width: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
-    margin: 4rem 0;
+    /* margin: 4rem 0; */
     border: 1px solid var(--gala-red);
     transition: all 0.3s ease;
 }
 
 .cvbtn:hover{
-    /* border: 1px solid rgba(255, 0, 0, 0); */
     cursor: pointer;
     color: var(--gala-red);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -311,33 +272,9 @@ section p{
 .right{
     text-align: end;
 }
-/* .glumica{
-    position: relative;
-    top: 10vw;
-} */
 
 /* MEDIA QUERIES */
 @media screen and (max-width:950px){
-    /* ABOUT ME */
-    .about-me-container{
-        flex-direction: column;
-    }
-
-    .about-text-container{
-        max-width: 80rem;
-        width: 90%;
-    }
-
-    .about-me-img {
-        width: 90vw;
-        height: 130vw;
-        margin: 2rem 0;
-    }
-
-    .about-me-img img{
-        
-        min-width: 100%;
-    }
 }
 
 @media screen and (max-width:700px){
@@ -403,7 +340,7 @@ section p{
     }
     
     .parallax{
-        font-size: 20vw;
+        font-size: 15vw;
     }
 }
 

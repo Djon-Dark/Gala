@@ -1,13 +1,3 @@
-let actress = document.querySelector(".actress");
-let director = document.querySelector(".director");
-let model = document.querySelector(".model");
-let imageContainers = document.querySelectorAll(".image-container");
-let firstImgCont = document.querySelector(".firstImgCont");
-let navlinks = document.querySelectorAll(".nav-link");
-let imgala = document.querySelector(".imgala");
-// let aboutText = document.querySelector(".about-text");
-
-
 // FADE UP ANIMATION, CHECKS IF TARGET IN VIEW ON LOAD AND THEN ON SCROLL
 function addFadeUp(target, offset=0, delay=0){
     // check first if the target exists, otherwise the function would throw an error
@@ -36,23 +26,12 @@ function addFadeUp(target, offset=0, delay=0){
 }
 
 // FUNCTION INITIALIZATION 
-addFadeUp(actress, 0, 100);
-addFadeUp(director, -200);
-addFadeUp(model);
+let imageContainers = document.querySelectorAll(".image-container");
 imageContainers.forEach(image => addFadeUp(image,0,700));
-addFadeUp(imgala, 0, 500);
-// addFadeUp(aboutText, 0,1300);
-addFadeUp(document.querySelector(".about-me-img"), 0, 1500);
-// addFadeUp(document.querySelector(".glumica"), 0, 500);
-
-// NAVLINKS STAGGERED FADE IN, ONE BY ONE
-// for(let i=0;i<navlinks.length;i++){
-//     addFadeUp(navlinks[i],0,i*100)
-// }
+addFadeUp(document.querySelector(".about-image"), 0, 100);
 
 // ABOUT-TEXT STAGGERED FADE IN, ONE BY ONE
-let aboutText = document.querySelector(".about-text").children;
-console.log(aboutText);
+let aboutText = document.querySelector(".text-container").children;
 for(let i=0;i<aboutText.length;i++){
-    addFadeUp(aboutText[i],0,i*300)
+    addFadeUp(aboutText[i],0,i*500)
 }
