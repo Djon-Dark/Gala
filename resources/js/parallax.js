@@ -32,7 +32,7 @@ function scrollanje2(target, speed, factor=3){
 
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS IN VIEW WITH ACTIVATION THRESHOLD
 // - negative factor will increase scrolling speed
-function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){
+function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){ // PROBAJ UBACIT UVJET AKO JE ON LOAD U VIEWPORTU DA DRUGACIJE TRANSLATIRA
     document.addEventListener('scroll', ()=>{
         const topDistance = target.getBoundingClientRect().top;
         const bottomDistance = target.getBoundingClientRect().bottom;
@@ -50,13 +50,34 @@ function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0)
 
 // JS MEDIA QUERY - set different scroll speed on mobile
 if(window.matchMedia("(max-width:700px)").matches){
+    // mobile view
     scrollanje3(document.querySelector('.glumica'), 1,2,200,200);
     scrollanje3(document.querySelector(".direktor"),1,0.5,200, 200);
     scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
-    console.log("mobile view");
 } else {
+    // desktop view
     scrollanje3(document.querySelector('.glumica'), 1,2,0,0);
-    scrollanje3(document.querySelector(".direktor"),1,1,200, 200);
+    scrollanje3(document.querySelector(".direktor"),1,2,200, 200);
     scrollanje3(document.querySelector(".modelica"),1,7,200,200);
-    console.log("desktop view");
 }
+
+// NE RADI
+// function inView(target){
+//     document.addEventListener("load", ()=>{
+//         console.log("LOADED");
+//         const topDistance = target.getBoundingClientRect().top;
+//         const bottomDistance = target.getBoundingClientRect().bottom;
+//         if(topDistance >=0 || bottomDistance > 0){
+//             scrollanje(target,5);
+
+//         } else {
+//             if(window.matchMedia("(max-width:700px)").matches){
+//                 scrollanje3(target, 1,2,200,200);
+//             } else {
+//                 scrollanje3(target, 1,2,0,0);
+//             }
+//         }
+//     })
+// }
+
+// inView(document.querySelector('.glumica'));
