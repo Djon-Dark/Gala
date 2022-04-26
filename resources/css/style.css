@@ -1,5 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap');
 
 /* ANIMATIONS */
 @keyframes fadeup {
@@ -30,6 +31,10 @@
     margin-top: 5rem;
 }
 
+.bottom-space{
+    margin-bottom: 15rem;
+}
+
 .transparent{
     opacity: 0;
 }
@@ -53,24 +58,6 @@
     overflow: visible !important;
 }
 
-.mobile{
-    display: none;
-}
-
-.link::after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 0.1rem;
-    width: 0px;
-    background: var(--text-color);
-    transition: all 0.1s linear;
-}
-
-.link:hover::after {
-    width: 100%;
-}
-
 .uppercase{
     text-transform: uppercase;
 }
@@ -90,7 +77,10 @@ body{
     flex-direction: column;
     --text-color: rgb(0, 0, 0);
     --bkg-color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+    --gala-red: rgb(220, 0, 0);
+    --mainfont: 'Josefin Sans', sans-serif;
+    --alternatefont: 'Josefin Sans', sans-serif;
+    font-family: var(--mainfont);
     color: var(--text-color);
     background-color: var(--bkg-color);
     transition: all 3s ease;
@@ -108,71 +98,84 @@ video{
 }
 
 /* SPECIFIC CLASSES */
-nav ul{
-    list-style: none;
-    /* position: absolute; */
-    position: fixed;
-    top: 2rem;
-    margin-top: 0;
-    padding-left: 2rem;
-}
-
-.nav-link{
-    display: inline-block;
-    font-size: 1.2rem;
-}
-
-.nav-link::after{
-    transition: all ease-in-out .2s;
-    background: var(--text-color);
-    content: "";
-    display: block;
-    height: 1px;
-    width: 0;
-}
-
-.nav-link:hover:after {
+.heading{
+    margin-bottom: 5rem;
+    text-align: center;
+    font-weight: 200;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gala{
-    /* position: absolute; */
-    position: fixed;
-    right: 50vw;
-    top: 2rem;
-    
+    font-size: 6rem;
+    padding-right: 1.2rem; /* added padding to counteract .nikolic letter spacing at c */
 }
 
 .nikolic{
-    /* position: absolute; */
-    position: fixed;
-    left: 50vw;
-    top: 7rem;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+    line-height: 1rem !important;
 }
 
-.heading{
-    margin-bottom: 15rem;
+.text-container{
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-evenly !important;
 }
 
-.heading p{
-    font-size: 6rem;
-    font-weight: 900;
-    line-height: 5rem;
-    margin: 0;
-    padding: 0;
+.text-container h3{
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.sub-heading{
-    font-size: 5rem;
-    font-weight: 900;
-    line-height: 5rem;
-    margin: 0;
-    padding: 0;
+.cvbtn{
+    font-size: 0.8rem;
+    height: 3rem;
+    min-height: 3rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gala-red);
+    transition: all 0.3s ease;
+}
+
+.cvbtn:hover{
+    cursor: pointer;
+    color: var(--gala-red);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
+.contact a{
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact a:hover{
+    color: var(--gala-red);
+}
+
+.social{
+    font-size: 2rem;
+}
+
+.social i{
+    margin-right: 0.5rem;
 }
 
 section{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2vw;
     margin-bottom: 2rem;
     z-index: 2;
@@ -214,101 +217,25 @@ section p{
     min-width: 100%;
 }
 
-#contact-details{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 5rem 0;
+/* TEST SECTION */
+.parallax{
+    font-size: 10vw;
+    font-weight: 700;
+    width: 90%;
+    margin: 5rem auto;
+    opacity: 0.5;
 }
 
-#contact-details p{
-    font-size: 3rem;
-    margin: 1rem;
+.center{
+    text-align: center;
 }
 
-#contact-details img{
-    height: 3rem;
-    width: 3rem;
-    margin: 0 1rem;
-    border-radius: 1rem;
-}
-
-.contact-img{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    border: 2px solid black;
-    display: none;
-}
-
-.contact-img img{
-    min-width: 100%;
-    min-height: 100%;
-}
-
-/* PAGE SPECIFIC CLASSES */
-/* ABOUT ME PAGE */
-.about-me-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.about-text-container{
-    max-width: 40rem;
-    width: 50vw;
-    margin: 2vw;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.about-text-container p{
-    font-size: 1rem;
-}
-
-.about-me-img{
-    height: 37rem;
-    width: 25rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 2vw;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-}
-
-.about-me-img img{
-    height: 100%;
+.right{
+    text-align: end;
 }
 
 /* MEDIA QUERIES */
 @media screen and (max-width:950px){
-    /* ABOUT ME */
-    .about-me-container{
-        flex-direction: column;
-    }
-
-    .about-text-container{
-        max-width: 80rem;
-        width: 90%;
-    }
-
-    .about-me-img {
-        width: 90vw;
-        height: 130vw;
-        margin: 2rem 0;
-    }
-
-    .about-me-img img{
-        
-        min-width: 100%;
-    }
 }
 
 @media screen and (max-width:700px){
@@ -344,7 +271,7 @@ section p{
     }
 
     .image-column{
-        width: 100%;
+        width: 90%;
     }
 
     .wide{
@@ -371,6 +298,10 @@ section p{
     #contact-details img{
         height: 8vw;
         width: 8vw;
+    }
+    
+    .parallax{
+        font-size: 15vw;
     }
 }
 
