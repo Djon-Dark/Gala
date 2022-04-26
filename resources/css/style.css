@@ -1,8 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Ubuntu:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap');
 
 /* ANIMATIONS */
 @keyframes fadeup {
@@ -222,7 +220,7 @@ section p{
 /* TEST SECTION */
 .parallax{
     font-size: 10vw;
-    font-weight: bold;
+    font-weight: 700;
     width: 90%;
     margin: 5rem auto;
     opacity: 0.5;
