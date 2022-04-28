@@ -10,10 +10,7 @@ function playPauseVideo() {
                 let observer = new IntersectionObserver(
                     (entries) => {
                         entries.forEach((entry) => {
-                            if (
-                                entry.intersectionRatio !== 1 &&
-                                !video.paused
-                            ) {
+                            if (entry.intersectionRatio !== 1 && !video.paused) {
                                 video.pause();
                             } else if (video.paused) {
                                 video.play();

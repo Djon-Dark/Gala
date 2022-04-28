@@ -84,6 +84,7 @@ body{
     color: var(--text-color);
     background-color: var(--bkg-color);
     transition: all 3s ease;
+    overflow-x: hidden;
 }
 
 h1{
@@ -219,11 +220,11 @@ section p{
 
 /* TEST SECTION */
 .parallax{
-    font-size: 10vw;
+    font-size: 15vw;
     font-weight: 700;
     width: 90%;
-    margin: 5rem auto;
-    opacity: 0.5;
+    margin: 0 auto 5rem auto;
+    opacity: 0.2;
 }
 
 .center{
@@ -299,10 +300,6 @@ section p{
         height: 8vw;
         width: 8vw;
     }
-    
-    .parallax{
-        font-size: 15vw;
-    }
 }
 
 @media screen and (max-width:420px){
@@ -322,5 +319,10 @@ section p{
     .sub-heading{
         font-size: 15vw;
         line-height: 15vw;
+    }
+
+    .direktor,
+    .modelica{
+        margin-bottom: 1rem;
     }
 }

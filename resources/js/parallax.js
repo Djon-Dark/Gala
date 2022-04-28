@@ -1,4 +1,4 @@
-// USE THIS IF ELEMENT IS IN VIEW ON PAGE LOAD, TO AVOID INITIAL STUTTER
+// USE THIS IF ELEMENT IS IN VIEW ON PAGE LOAD, TO AVOID INITIAL STUTTER/TELEPORT
 function scrollanje(target, factor){
     document.addEventListener('scroll', ()=>{
         const topDistance = target.getBoundingClientRect().top;
@@ -9,8 +9,6 @@ function scrollanje(target, factor){
         }
     })
 }
-
-// scrollanje(document.querySelector('.glumica'),5);
 
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS FULLY IN VIEW
 // - negative factor will increase scrolling speed
@@ -32,7 +30,7 @@ function scrollanje2(target, speed, factor=3){
 
 // USE THIS TO APPLY PARALLAX SCROLL ONLY WHEN ELEMENT IS IN VIEW WITH ACTIVATION THRESHOLD
 // - negative factor will increase scrolling speed
-function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){ // PROBAJ UBACIT UVJET AKO JE ON LOAD U VIEWPORTU DA DRUGACIJE TRANSLATIRA
+function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0){
     document.addEventListener('scroll', ()=>{
         const topDistance = target.getBoundingClientRect().top;
         const bottomDistance = target.getBoundingClientRect().bottom;
@@ -48,36 +46,34 @@ function scrollanje3(target, speed, factor=3, topThreshold=0, bottomThreshold=0)
     })
 }
 
+
+// FUNCTION INITIALIZATIONS
 // JS MEDIA QUERY - set different scroll speed on mobile
 if(window.matchMedia("(max-width:700px)").matches){
     // mobile view
-    scrollanje3(document.querySelector('.glumica'), 1,2,200,200);
-    scrollanje3(document.querySelector(".direktor"),1,0.5,200, 200);
-    scrollanje3(document.querySelector(".modelica"),1,1.5,200, 200); 
+    scrollanje3(document.querySelector(".direktor"),1,0.5,200,200);
+    scrollanje3(document.querySelector(".modelica"),1,1.5,200,200); 
 } else {
     // desktop view
-    scrollanje3(document.querySelector('.glumica'), 1,2,0,0);
-    scrollanje3(document.querySelector(".direktor"),1,2,200, 200);
+    scrollanje3(document.querySelector(".direktor"),1,2,200,200);
     scrollanje3(document.querySelector(".modelica"),1,7,200,200);
 }
 
-// NE RADI
-// function inView(target){
-//     document.addEventListener("load", ()=>{
-//         console.log("LOADED");
-//         const topDistance = target.getBoundingClientRect().top;
-//         const bottomDistance = target.getBoundingClientRect().bottom;
-//         if(topDistance >=0 || bottomDistance > 0){
-//             scrollanje(target,5);
+// IF TARGET IS IN VIEW ON LOAD, WILL USE SCROLL1 TO REMOVE INITIAL TELEPORT
+function inView(target){
+    window.addEventListener("load", ()=>{
+        const bottomDistance = target.getBoundingClientRect().bottom;
+        if(bottomDistance <= window.innerHeight){
+            scrollanje(target,2);
+        } else {
+            if(window.matchMedia("(max-width:700px)").matches){
+                scrollanje3(document.querySelector('.glumica'), 1,2,200,200);
+            } else {
+                scrollanje3(document.querySelector('.glumica'), 1,2,0,0);
+            }
+        }
+    })
+}
 
-//         } else {
-//             if(window.matchMedia("(max-width:700px)").matches){
-//                 scrollanje3(target, 1,2,200,200);
-//             } else {
-//                 scrollanje3(target, 1,2,0,0);
-//             }
-//         }
-//     })
-// }
+inView(document.querySelector('.glumica'));
 
-// inView(document.querySelector('.glumica'));
