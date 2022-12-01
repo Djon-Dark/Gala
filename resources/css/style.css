@@ -63,8 +63,9 @@
 }
 
 .about-image{
-    background: url("/Gala/resources/images/gala_mugshot_web.jpg"), contain;
+    background: url("/Gala/resources/images/gala_mugshot_web.jpg") contain no-repeat fixed center;
 }
+
 
 /* GENERAL CLASSES */
 html{
