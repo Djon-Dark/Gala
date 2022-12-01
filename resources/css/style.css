@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap');
 
 /* ANIMATIONS */
-@keyframes fadeup {
+/* @keyframes fadeup {
     from{
         transform: translateY(2rem);
         opacity: 0;
@@ -12,7 +12,7 @@
         transform: translateY(0);
         opacity: 1;
     }
-}
+} */
 
 /* ANIMATION CLASS */
 .fadeup{
@@ -60,6 +60,10 @@
 
 .uppercase{
     text-transform: uppercase;
+}
+
+.about-image{
+    background: url("/Gala/resources/images/gala_mugshot_web.jpg"), contain;
 }
 
 /* GENERAL CLASSES */
