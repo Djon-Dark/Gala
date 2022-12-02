@@ -63,7 +63,8 @@
 }
 
 .about-image{
-    background: url("/Gala/resources/images/gala_mugshot_web.jpg") no-repeat center/cover;
+    /* background: url("/Gala/resources/images/gala_mugshot_web.jpg") no-repeat center/cover; */
+    background: url("/Gala/resources/images/Gala_gloria_fus.jpg") no-repeat center/cover;
 }
 
 
