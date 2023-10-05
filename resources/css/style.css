@@ -63,8 +63,8 @@
 }
 
 .about-image {
-  background: url("/resources/images/first_image.jpg") no-repeat center/cover;
-  /* background: url("/resources/images/Gala_gloria_fus.jpg") no-repeat center/cover; */
+  background: url("/resources/images/first_image.webp") no-repeat center/cover;
+  /* background: url("/resources/images/Gala_gloria_fus.webp") no-repeat center/cover; */
 }
 
 /* GENERAL CLASSES */
